@@ -1,0 +1,201 @@
+
+.hero-section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+    background-color: #111;
+    
+  }
+
+  .hero-container{
+    margin: 62px;
+  }
+  
+  h1 {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  
+  h2 {
+    font-size: 1.5rem;
+    font-weight: 300;
+  }
+  
+  
+  .typing-text {
+    display: inline-block;
+    position: relative;
+    white-space: nowrap;
+    max-width: 100%; /* Prevent overflow */
+  }
+  
+  .typing-text::after {
+    content: '|';
+    position: absolute;
+    right: -13px;
+    animation: blink 1s infinite;
+  }
+  
+  .outline-button {
+    border: 1px solid #08b9b9; 
+    color: #08b9b9;
+    padding: 3px 20px;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: 400;
+    background-color: transparent;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  } 
+  
+  .outline-button:hover {
+    background-color: #08b9b9;
+    color: #fff;
+    transition: background-color 0.3s ease;
+    border: none;
+  }
+  
+  .button-full {
+    border: 1px solid #08b9b9;
+    color: #ffffff;
+    padding: 3px 35px;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: 400;
+    background-color: #08b9b9;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .button-full:hover {
+    background-color: transparent;
+    color: #08b9b9;
+    transition: background-color 0.3s ease;
+    border: 1px solid #08b9b9;
+  }
+  
+  @keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 0; }
+  }
+  
+  .profile-image {
+    width: 100%;
+    max-width: 300px; /* Cap size but allow shrinking */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .profile-image-container {
+    position: relative;
+    display: inline-block;
+    overflow: hidden; /* Contain pseudo-element */
+  }
+
+
+.poppins-bold {
+    color: rgb(255, 255, 255);
+    font-family: "Poppins", serif;
+    font-weight: 900;
+    font-style: normal;
+    font-size: 40px;
+  }
+  
+  .my-name {
+    font-size: 80px;
+    color: #08b9b9;
+  }
+
+  .welcome-text{
+    font-size: 0.8rem;
+    color: #666666;
+    font-weight: bold;
+  }
+
+
+.profile-image-section{
+    margin-top: 30px;
+  }
+  
+  
+  @media (max-width: 768px) {
+    .poppins-bold {
+      font-size: 30px;
+    }
+  
+    .my-name {
+      font-size: 50px;
+    }
+  
+    h1 {
+      font-size: 2rem; /* Adjusted for better scaling */
+    }
+  
+    h2 {
+      font-size: 1.5rem;
+    }
+  
+    .profile-image {
+      max-width: 200px;
+      margin-top: 20px;
+    }
+    .profile-image-section{
+      margin-top: 0px;
+    }
+    
+  }
+  
+  @media (max-width: 576px) {
+    h1 {
+      font-size: 1.5rem;
+    }
+  
+    h2 {
+      font-size: 1rem; 
+    }
+  
+    .typing-text {
+      white-space: normal; /* Allow wrapping on mobile */
+      max-width: 100%;
+    }
+  
+    .profile-image {
+      max-width: 150px;
+    }
+  
+    .button-full,
+    .outline-button {
+      width: 100%; /* Full-width buttons on mobile */
+      margin-bottom: 10px;
+    }
+  }
+  
+  @media (min-width: 992px) {
+    .profile-image-container {
+      margin-left: auto;
+      margin-right: auto;
+      display: flex;
+      justify-content: center;
+    }
+  }
+  
+  p {
+    font-size: 1rem;
+  }
+  
+  @media (max-width: 768px) {
+    p {
+      font-size: 0.9rem;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    p {
+      font-size: 0.85rem;
+    }
+  }

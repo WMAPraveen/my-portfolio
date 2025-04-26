@@ -1,0 +1,92 @@
+/* Footer.css */
+.footer-container{
+    margin: 0px 90px;
+}
+
+.footer-section {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #070707;
+    position: relative;
+    border-top: 1px solid #dee2e6;
+  }
+  
+  .footer-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    color: #2c2c2c;
+  }
+  
+  .footer-link {
+    color: #2e2d2d;
+    text-decoration: none;
+    font-size: 1rem;
+    line-height: 2;
+  }
+  
+  .footer-link:hover {
+    color: #08b9b9; /* Green hover effect to match your theme */
+    text-decoration: underline;
+  }
+  
+  .social-icons {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .social-icon {
+    font-size: 1.5rem;
+    color: #ffffff;
+    background-color: #08b9b9; 
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+  }
+  
+  .social-icon:hover {
+    background-color: #08b9b9; 
+  }
+  
+  .copyright-text {
+    font-size: 0.9rem;
+    color: #2c2c2c;
+    margin-bottom: 0;
+  }
+  
+  .back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #08b9b9;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: #ffffff;
+    transition: background-color 0.3s ease;
+  }
+  
+  .back-to-top:hover {
+    background-color: #08b9b9;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 767px) {
+    .footer-section {
+      text-align: center;
+    }
+  
+    .social-icons {
+      justify-content: center;
+    }
+  }

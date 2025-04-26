@@ -1,0 +1,54 @@
+/* Font and Section Style */
+.about-me-section {
+  font-family: Poppins, sans-serif;
+}
+
+/* Vertical line above heading */
+.about-section-heading {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+}
+
+.about-heading {
+  font-size: 1rem;
+  color: #08b9b9; 
+  font-weight: bold;
+  position: relative;
+  margin-bottom: 60px;
+  padding-top: 100px; /* space for the line */ 
+}
+
+.about-section-heading::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  height: 90px;
+  width: 2px;
+  background-color: #08b9b9;
+}
+
+/* Headings */
+h1.display-4 {
+  font-size: 2rem;
+  line-height: 1.2;
+}
+
+/* Paragraph */
+.about-me-section p {
+  color: #333;
+}
+
+/* Responsive Headings */
+@media (max-width: 768px) {
+  h1.display-4 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 992px) {
+  h1.display-4 {
+    font-size: 2rem;
+  }
+}

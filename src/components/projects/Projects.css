@@ -1,0 +1,156 @@
+/* Projects.css */
+
+.project-slider-section {
+    background-color: #ffffff;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .slider-wrapper {
+    position: relative;
+    perspective: 1000px; /* Enables 3D perspective */
+    height: 400px; /* Adjust based on card height */
+  }
+  
+  .slider-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+  }
+  
+  .project-card {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 300px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+  }
+  
+  .project-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .project-description {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 15px;
+  }
+  
+  .tech-stack {
+    margin-bottom: 15px;
+  }
+  
+  .tech-tag {
+    display: inline-block;
+    background-color: #e9ecef;
+    border-radius: 12px;
+    padding: 5px 10px;
+    margin: 5px;
+    font-size: 0.8rem;
+    color: #333;
+  }
+  
+  .project-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .source-code-btn {
+    background-color: #6c757d;
+    border: none;
+    border-radius: 20px;
+    padding: 8px 15px;
+    font-size: 0.9rem;
+  }
+  
+  .source-code-btn:hover {
+    background-color: #5a6268;
+  }
+  
+  .view-demo-btn {
+    background-color: #00cc00;
+    border: none;
+    border-radius: 20px;
+    padding: 8px 15px;
+    font-size: 0.9rem;
+  }
+  
+  .view-demo-btn:hover {
+    background-color: #00b300;
+  }
+  
+  .nav-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #00cc00;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    color: #ffffff;
+    z-index: 10;
+    transition: background-color 0.3s ease;
+  }
+  
+  .nav-arrow:hover {
+    background-color: #00b300;
+  }
+  
+  .left-arrow {
+    left: 20px;
+  }
+  
+  .right-arrow {
+    right: 20px;
+  }
+  
+  .nav-dots {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .dot {
+    width: 10px;
+    height: 10px;
+    background-color: #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .dot.active {
+    background-color: #00cc00;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 767px) {
+    .project-card {
+      width: 250px;
+    }
+  
+    .slider-wrapper {
+      height: 350px;
+    }
+  
+    .nav-arrow {
+      width: 35px;
+      height: 35px;
+      font-size: 1rem;
+    }
+  }
