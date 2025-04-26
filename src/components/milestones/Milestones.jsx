@@ -5,7 +5,7 @@ import './Milestones.css';
 
 const Milestones = () => {
   const milestones = [
-    {
+    { 
       date: '13th February, 2024',
       title: 'Full Stack Developer',
       company: 'HashX',

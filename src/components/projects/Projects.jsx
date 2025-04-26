@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Container, Button } from 'react-bootstrap';
 import './Projects.css';
 
-const projects = [
+const projects = [ 
   {
     title: 'SysInfo',
     description: 'SysInfo is a web-based terminal emulator which you can run basic commands like clear, battery, weather and etc.',
@@ -45,17 +45,17 @@ const ProjectSlider = () => {
   useEffect(() => {
     const autoSlide = setInterval(() => {
       nextSlide();
-    }, 30000); // 30,000 ms = 30 seconds
+    }, 20000); // 30,000 ms = 30 seconds
 
     // Clean up the interval on component unmount or when user interacts
     return () => clearInterval(autoSlide);
   }, [currentIndex]); // Reset timer on user interaction (index change)
 
   return (
-    <section className="project-slider-section py-5">
+    <section className="project-slider-section">
       <Container>
-      <div className='milestones-section-heading'>
-        <h2 className="milestones-heading text-center">Special Milestones</h2>
+        <div className='project-slider-section-heading'>
+        <h2 className="project-slider-heading text-center">Special Milestones</h2>
         </div>
         <div className="slider-wrapper">
           <Button className="nav-arrow left-arrow" onClick={prevSlide}>

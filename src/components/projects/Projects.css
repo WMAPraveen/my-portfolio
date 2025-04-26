@@ -2,14 +2,39 @@
 
 .project-slider-section {
     background-color: #ffffff;
+    padding: 80px 0;
     position: relative;
     overflow: hidden;
+  }
+
+  .project-slider-section-heading{
+    position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  }
+
+  .project-slider-section-heading::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    height: 90px;
+    width: 2px;
+    background-color: #08b9b9;
+  }
+
+  .project-slider-heading{
+    color: #08b9b9;
+  margin-bottom: 35px;
+  font-weight: bold;
+  font-size: 1rem;
+  padding-top: 115px;
   }
   
   .slider-wrapper {
     position: relative;
-    perspective: 1000px; /* Enables 3D perspective */
-    height: 400px; /* Adjust based on card height */
+    /* perspective: 1000px;  */
+    height: 100px;
   }
   
   .slider-container {
