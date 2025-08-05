@@ -5,7 +5,7 @@
     flex-direction: row;
     align-items: center;
     overflow-x: hidden; /* Prevent horizontal scroll */
-    background-color: #111;
+    background-image: linear-gradient(135deg, #140402 0%, #0a0201 50%, #200c02 100%);
     
   }
 
@@ -39,8 +39,8 @@
   }
   
   .outline-button {
-    border: 1px solid #08b9b9; 
-    color: #08b9b9;
+    border: 1px solid #4e0c04; 
+    color: #4e0c04;
     padding: 3px 20px;
     border-radius: 5px;
     font-size: 15px;
@@ -51,29 +51,29 @@
   } 
   
   .outline-button:hover {
-    background-color: #08b9b9;
+    background-color: #4e0c04;
     color: #fff;
     transition: background-color 0.3s ease;
     border: none;
   }
   
   .button-full {
-    border: 1px solid #08b9b9;
+    border: 1px solid #4e0c04;
     color: #ffffff;
     padding: 3px 35px;
     border-radius: 5px;
     font-size: 15px;
     font-weight: 400;
-    background-color: #08b9b9;
+    background-color: #4e0c04;
     cursor: pointer;
     transition: background-color 0.3s ease;
   }
   
   .button-full:hover {
     background-color: transparent;
-    color: #08b9b9;
+    color: #ffffff;
     transition: background-color 0.3s ease;
-    border: 1px solid #08b9b9;
+    border: 1px solid #4e0c04;
   }
   
   @keyframes blink {
@@ -108,11 +108,11 @@
   
   .my-name {
     font-size: 80px;
-    color: #08b9b9;
+    color: #4e0c04;
   }
 
   .welcome-text{
-    font-size: 0.8rem;
+    font-size: 1rem;
     color: #666666;
     font-weight: bold;
   }

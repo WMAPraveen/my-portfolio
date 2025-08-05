@@ -23,7 +23,7 @@ const CustomNavbar = () => {
   return (
     <Navbar bg="dark" variant="dark" expand="lg" className=" navbar">
       <Navbar.Brand href="#home">
-        <span className="logo fw-bold">AW</span>
+        <span className="logo fw-bold">&lt;/AVISHKA&gt;</span>
       </Navbar.Brand>
       
       {/* Custom Hamburger Icon */}

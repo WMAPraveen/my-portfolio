@@ -1,132 +1,38 @@
-import React, { useState, useEffect } from 'react';
-import { Container, Button } from 'react-bootstrap';
-import './Projects.css';
+import React from 'react';
+import './Projects.css'; // Custom CSS for styling
 
-const projects = [ 
-  {
-    title: 'SysInfo',
-    description: 'SysInfo is a web-based terminal emulator which you can run basic commands like clear, battery, weather and etc.',
-    techStack: ['JavaScript', 'HTML', 'CSS'],
-    sourceCode: 'https://github.com/sysinfo',
-    demo: 'https://sysinfo-demo.com',
-  },
-  {
-    title: 'Portfolio',
-    description: 'A personal portfolio showcasing my skills, projects, and milestones with a modern design.',
-    techStack: ['React', 'Bootstrap', 'CSS'],
-    sourceCode: 'https://github.com/portfolio',
-    demo: 'https://portfolio-demo.com',
-  },
-  {
-    title: 'E-Shop',
-    description: 'An e-commerce platform with product listings, cart functionality, and secure checkout.',
-    techStack: ['Node.js', 'Express', 'MongoDB'],
-    sourceCode: 'https://github.com/eshop',
-    demo: 'https://eshop-demo.com',
-  },
-];
+const Projects = () => {
+  const cards = [
+    { title: 'Card 1', content: 'This is the first card with some sample content.', image: 'https://via.placeholder.com/300x200?text=Card+1' },
+    { title: 'Card 2', content: 'This is the second card with different content.', image: 'https://via.placeholder.com/300x200?text=Card+2' },
+    { title: 'Card 3', content: 'This is the third card with unique content.', image: 'https://via.placeholder.com/300x200?text=Card+3' },
+    { title: 'Card 4', content: 'This is the fourth card with sample content.', image: 'https://via.placeholder.com/300x200?text=Card+4' },
+  ];
 
-const ProjectSlider = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  const nextSlide = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % projects.length);
-  };
-
-  const prevSlide = () => {
-    setCurrentIndex((prevIndex) => (prevIndex - 1 + projects.length) % projects.length);
-  };
-
-  const goToSlide = (index) => {
-    setCurrentIndex(index);
-  };
-
-  // Auto-slide every 30 seconds
-  useEffect(() => {
-    const autoSlide = setInterval(() => {
-      nextSlide();
-    }, 20000); // 30,000 ms = 30 seconds
-
-    // Clean up the interval on component unmount or when user interacts
-    return () => clearInterval(autoSlide);
-  }, [currentIndex]); // Reset timer on user interaction (index change)
+  // Group cards into sets of 3 (for structure, but we'll scroll all)
+  const cardGroups = [];
+  for (let i = 0; i < cards.length; i += 3) {
+    cardGroups.push(cards.slice(i, i + 3));
+  }
 
   return (
-    <section className="project-slider-section">
-      <Container>
-        <div className='project-slider-section-heading'>
-        <h2 className="project-slider-heading text-center">Special Milestones</h2>
-        </div>
-        <div className="slider-wrapper">
-          <Button className="nav-arrow left-arrow" onClick={prevSlide}>
-            <i className="bi bi-chevron-left"></i>
-          </Button>
-
-          <div className="slider-container">
-            {projects.map((project, index) => {
-              const offset = index - currentIndex;
-              const angle = offset * 60; // Adjust angle for cylindrical effect
-              const zTranslate = Math.abs(offset) * -100; // Push cards back in z-space
-              const opacity = 1 - Math.abs(offset) * 0.3; // Fade cards as they move away
-
-              return (
-                <div
-                  key={index}
-                  className="project-card"
-                  style={{
-                    transform: `rotateY(${angle}deg) translateZ(300px) translateZ(${zTranslate}px)`,
-                    opacity: opacity,
-                    zIndex: projects.length - Math.abs(offset),
-                  }}
-                >
-                  <h3 className="project-title">{project.title}</h3>
-                  <p className="project-description">{project.description}</p>
-                  <div className="tech-stack">
-                    {project.techStack.map((tech, techIndex) => (
-                      <span key={techIndex} className="tech-tag">{tech}</span>
-                    ))}
-                  </div>
-                  <div className="project-buttons">
-                    <Button
-                      href={project.sourceCode}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="source-code-btn"
-                    >
-                      Source Code
-                    </Button>
-                    <Button
-                      href={project.demo}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="view-demo-btn"
-                    >
-                      View Demo
-                    </Button>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-
-          <Button className="nav-arrow right-arrow" onClick={nextSlide}>
-            <i className="bi bi-chevron-right"></i>
-          </Button>
-        </div>
-
-        {/* Navigation Dots */}
-        <div className="nav-dots text-center mt-4">
-          {projects.map((_, index) => (
-            <span
-              key={index}
-              className={`dot ${index === currentIndex ? 'active' : ''}`}
-              onClick={() => goToSlide(index)}
-            ></span>
+    <section className="card-carousel-section">
+      <h2 className="text-center mb-4">Featured Cards</h2>
+      <div className="carousel-wrapper">
+        <div className="d-flex justify-content-center continuous-scroll">
+          {cards.concat(cards).map((card, index) => ( // Duplicate cards for seamless looping
+            <div className="carousel-card" key={index}>
+              <img className="d-block w-100" src={card.image} alt={card.title} />
+              <div className="card-body">
+                <h3>{card.title}</h3>
+                <p>{card.content}</p>
+              </div>
+            </div>
           ))}
         </div>
-      </Container>
+      </div>
     </section>
   );
 };
 
-export default ProjectSlider;
+export default Projects;

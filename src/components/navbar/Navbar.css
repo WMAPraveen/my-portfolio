@@ -1,6 +1,6 @@
 .nav-link {
     font-family: Teko, serif;
-    font-size: 16px;
+    font-size: 18px;
     color: #fff;
   }
 
@@ -9,19 +9,23 @@
   }
   
   .nav-link:hover {
-    color: #08b9b9;
+    color: #6e0d02;
     transition: background-color 0.3s ease;
   }
   
   .logo {
-    color: #03b4ab;
-    border: 2px solid #ffffff;
     padding: 6px;
     border-radius: 5px;
-  }
+    background-image: linear-gradient(135deg, #910c0c 0%, #7e3d01 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    /* font-family: monospace; Optional: for code-like appearance */
+    font-size: 1.6rem; /* Adjust as needed */
+}
   .outline-button {
-    border: 1px solid #08b9b9; 
-    color: #08b9b9;
+    border: 1px solid #4e0c04; 
+    color: #ffffff;
     padding: 3px 20px;
     border-radius: 5px;
     font-size: 15px;
@@ -31,7 +35,7 @@
     transition: background-color 0.3s ease;
   } 
   .outline-button:hover {
-    background-color: #08b9b9;
+    background-color: #4e0c04;
     color: #fff;
     transition: background-color 0.3s ease;
     border: none;
@@ -39,8 +43,8 @@
 
   @media (max-width: 990px) {
   .nav-links-container {
-    border: 2px solid #08b9b9;
-    color: #08b9b9;
+    border: 2px solid #ffffff;
+    color: #ffffff;
     display: flex;
     justify-content: center;
     padding: 5px;

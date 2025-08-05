@@ -29,7 +29,7 @@ const Contact = () => {
         <h2 className="contact-heading text-center mb-2">Contact</h2>
         </div>
        <div className='contact-section-subheading'>
-       <h3 className="contact-subtitle text-center mb-4">Call or write <span style={{color: '#08b9b9'}}>anytime</span></h3>
+       <h3 className="contact-subtitle text-center mb-4">Call or write <span style={{color: '#4e0c04'}}>anytime</span></h3>
        </div>
         <Row className="justify-content-center align-items-center">
           <Col md={6} className="contact-form-col">

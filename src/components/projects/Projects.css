@@ -1,181 +1,114 @@
-/* Projects.css */
+.card-carousel-section {
+  background-color: #ffffff;
+  min-height: 100vh;
+  padding: 40px 20px;
+  position: relative;
+  overflow: hidden;
+}
 
-.project-slider-section {
-    background-color: #ffffff;
-    padding: 80px 0;
-    position: relative;
-    overflow: hidden;
-  }
+.text-center.mb-4 {
+  color: #333;
+  font-size: 2rem;
+  font-weight: 700;
+}
 
-  .project-slider-section-heading{
-    position: relative;
+.carousel-wrapper {
+  width: 100%;
+  overflow: hidden;
+}
+
+.d-flex.justify-content-center.continuous-scroll {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  }
+  justify-content: flex-start; /* Align cards to start for continuous scroll */
+  gap: 30px; /* Space between cards */
+  width: 100%;
+  max-width: 800px; /* Fit all 4 cards (300px * 4 + 30px * 3 gaps = 1200px) */
+  margin: 0 auto;
+  animation: scroll 40s linear infinite; /* Slow continuous scroll */
+}
 
-  .project-slider-section-heading::after{
-    content: '';
-    position: absolute;
-    top: 0;
-    height: 90px;
-    width: 2px;
-    background-color: #08b9b9;
-  }
+/* Calculate the total width of all cards including margins and gaps */
+.d-flex.justify-content-center.continuous-scroll {
+  width: calc(300px * 8 + 30px * 7); /* 4 cards * 2 (duplicated) + gaps (7 spaces between 8 cards) */
+}
 
-  .project-slider-heading{
-    color: #08b9b9;
-  margin-bottom: 35px;
-  font-weight: bold;
+.carousel-card {
+  flex: 0 0 300px; /* Fixed width for each card */
+  margin: 0 15px;
+  border: 1px solid #dee2e6;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background-color: #fff;
+  transition: transform 1s ease; /* Slower transition for smoother movement */
+}
+
+.carousel-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 20px;
+  text-align: center;
+}
+
+.card-body h3 {
+  font-size: 1.5rem;
+  color: #007bff;
+  margin-bottom: 10px;
+}
+
+.card-body p {
   font-size: 1rem;
-  padding-top: 115px;
+  color: #6c757d;
+  margin-bottom: 0;
+}
+
+.carousel-card:hover {
+  transform: scale(1.05);
+  z-index: 1;
+}
+
+/* Animation for continuous horizontal scrolling */
+@keyframes scroll {
+  0% {
+    transform: translateX(0); /* Start with Card 1 visible */
   }
-  
-  .slider-wrapper {
-    position: relative;
-    /* perspective: 1000px;  */
-    height: 100px;
+  100% {
+    transform: translateX(calc(-100%)); /* Move full width of the duplicated sequence */
   }
-  
-  .slider-container {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    transform-style: preserve-3d;
+}
+
+/* Empty card styling for alignment (unchanged) */
+.empty-card {
+  flex: 0 0 300px;
+  margin: 0 15px;
+  visibility: hidden;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .carousel-card {
+    flex: 0 0 250px;
   }
-  
-  .project-card {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 300px;
-    background-color: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    text-align: center;
-    transition: transform 0.5s ease, opacity 0.5s ease;
+
+  .empty-card {
+    flex: 0 0 250px;
   }
-  
-  .project-title {
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin-bottom: 10px;
+
+  .d-flex.justify-content-center.continuous-scroll {
+    gap: 15px; /* Reduced space on mobile */
+    max-width: 1000px; /* Adjusted for 4 cards (250px * 4 + 15px * 3 gaps = 1000px) */
+    width: calc(250px * 8 + 15px * 7); /* Adjusted for mobile card width and gap */
   }
-  
-  .project-description {
-    font-size: 0.9rem;
-    color: #666;
-    margin-bottom: 15px;
-  }
-  
-  .tech-stack {
-    margin-bottom: 15px;
-  }
-  
-  .tech-tag {
-    display: inline-block;
-    background-color: #e9ecef;
-    border-radius: 12px;
-    padding: 5px 10px;
-    margin: 5px;
-    font-size: 0.8rem;
-    color: #333;
-  }
-  
-  .project-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-  }
-  
-  .source-code-btn {
-    background-color: #6c757d;
-    border: none;
-    border-radius: 20px;
-    padding: 8px 15px;
-    font-size: 0.9rem;
-  }
-  
-  .source-code-btn:hover {
-    background-color: #5a6268;
-  }
-  
-  .view-demo-btn {
-    background-color: #00cc00;
-    border: none;
-    border-radius: 20px;
-    padding: 8px 15px;
-    font-size: 0.9rem;
-  }
-  
-  .view-demo-btn:hover {
-    background-color: #00b300;
-  }
-  
-  .nav-arrow {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: #00cc00;
-    border: none;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+
+  .card-body h3 {
     font-size: 1.2rem;
-    color: #ffffff;
-    z-index: 10;
-    transition: background-color 0.3s ease;
   }
-  
-  .nav-arrow:hover {
-    background-color: #00b300;
+
+  .card-body p {
+    font-size: 0.9rem;
   }
-  
-  .left-arrow {
-    left: 20px;
-  }
-  
-  .right-arrow {
-    right: 20px;
-  }
-  
-  .nav-dots {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-  }
-  
-  .dot {
-    width: 10px;
-    height: 10px;
-    background-color: #ccc;
-    border-radius: 50%;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .dot.active {
-    background-color: #00cc00;
-  }
-  
-  /* Responsive adjustments */
-  @media (max-width: 767px) {
-    .project-card {
-      width: 250px;
-    }
-  
-    .slider-wrapper {
-      height: 350px;
-    }
-  
-    .nav-arrow {
-      width: 35px;
-      height: 35px;
-      font-size: 1rem;
-    }
-  }
+}

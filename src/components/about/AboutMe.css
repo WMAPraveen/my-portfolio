@@ -8,16 +8,17 @@
   position: relative;
   display: flex;
   justify-content: center;
-  align-items: center; 
+  align-items: center;
 }
 
 .about-heading {
   font-size: 1rem;
-  color: #08b9b9; 
+  color: #4e0c04;
   font-weight: bold;
   position: relative;
   margin-bottom: 60px;
-  padding-top: 100px; /* space for the line */ 
+  padding-top: 100px;
+  /* space for the line */
 }
 
 .about-section-heading::after {
@@ -26,13 +27,18 @@
   top: 0;
   height: 90px;
   width: 2px;
-  background-color: #08b9b9;
+  background-color: #4e0c04;
 }
 
 /* Headings */
 h1.display-4 {
   font-size: 2rem;
   line-height: 1.2;
+}
+
+h1.display-1 {
+  font-size: 0.9rem;
+  line-height: 1;
 }
 
 /* Paragraph */
@@ -45,10 +51,18 @@ h1.display-4 {
   h1.display-4 {
     font-size: 2rem;
   }
+
+  h1.display-1 {
+    font-size: 1.1rem;
+  }
 }
 
 @media (max-width: 992px) {
   h1.display-4 {
     font-size: 2rem;
+  }
+
+  h1.display-1 {
+    font-size: 1.1rem;
   }
 }
