@@ -5,14 +5,14 @@ import './Milestones.css';
 
 const Milestones = () => {
   const milestones = [
-    { 
-      date: '13th February, 2024',
-      title: 'Full Stack Developer',
-      company: 'HashX',
-      description:
-        "HashX is dedicated to offering robust cybersecurity capabilities, safeguarding digital assets with advanced technology. Moreover, HashX proudly presents Sri Lanka's No #1 CTF platform, providing a space to host competitive inter university CTF competitions.",
-      icon: <FaBriefcase />,
-    },
+    // { 
+    //   date: '13th February, 2024',
+    //   title: 'Full Stack Developer',
+    //   company: 'HashX',
+    //   description:
+    //     "HashX is dedicated to offering robust cybersecurity capabilities, safeguarding digital assets with advanced technology. Moreover, HashX proudly presents Sri Lanka's No #1 CTF platform, providing a space to host competitive inter university CTF competitions.",
+    //   icon: <FaBriefcase />,
+    // },
     {
       date: '13th October, 2022',
       title: 'BSc (Hons) in Software Engineering (Undergraduate)',

@@ -28,9 +28,13 @@ const AboutMe = () => {
             transition={{ duration: 1, ease: "easeOut" }}
             viewport={{ once: true }}
           >
-            <div>
-
-            </div>
+            <div className="about-image-container">
+                            <img
+                              src={AboutImg}
+                              alt="About Image"
+                              className="img-fluid about-image"
+                            />
+                          </div>
 
           </motion.div>
         </Col>
@@ -78,8 +82,8 @@ const AboutMe = () => {
                   <FaBriefcase size={30} color="#08b9b9" />
                 </div> */}
                 <div className='d-flex flex-column align-items-center'>
-                  <h1 className="display-4 fw-bold">2+</h1>
-                  <h1 className="display-1 fw-bold">Years Experience</h1>
+                  <h1 className="display-4 fw-bold" style={{ color: '#4e0c04' }}>2+</h1>
+                  <h1 className="display-1 fw-bold" style={{ color: '#4e0c04' }}>Years Experience</h1>
                 </div>
               </div>
 
@@ -88,8 +92,8 @@ const AboutMe = () => {
                   <FaProjectDiagram size={30} color="#08b9b9" />
                 </div> */}
                 <div className='d-flex flex-column align-items-center'>
-                  <h1 className="display-4 fw-bold">4+</h1>
-                  <h1 className="display-1 fw-bold">Project Completed</h1>
+                  <h1 className="display-4 fw-bold" style={{ color: '#4e0c04' }}>4+</h1>
+                  <h1 className="display-1 fw-bold" style={{ color: '#4e0c04' }}>Projects Completed</h1>
                 </div>
               </div> 
 
@@ -98,8 +102,8 @@ const AboutMe = () => {
                   <FaProjectDiagram size={30} color="#08b9b9" />
                 </div> */}
                 <div className='d-flex flex-column align-items-center'>
-                  <h1 className="display-4 fw-bold">5+</h1>
-                  <h1 className="display-1 fw-bold">Technologies Mastered</h1>
+                  <h1 className="display-4 fw-bold" style={{ color: '#4e0c04' }}>5+</h1>
+                  <h1 className="display-1 fw-bold" style={{ color: '#4e0c04' }}>Technologies Mastered</h1>
                 </div>
               </div>
             </div>

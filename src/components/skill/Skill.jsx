@@ -4,27 +4,27 @@ import './Skill.css';
 
 //Replace these with actual image imports or SVGs
 import mongoDBIcon from '../../assets/Icons/mongodb.png';
-// import expressIcon from '../assets/express.png';
-// import reactIcon from '../assets/react.png';
+import mysqlIcon from '../../assets/Icons/mysql.png';
+import reactIcon from '../../assets/Icons/react.png';
 import nodeIcon from '../../assets/Icons/node.webp';
-// import jsIcon from '../assets/javascript.png';
-// import pythonIcon from '../assets/python.png';
-import Java from '../../assets/Icons/java.webp';
-// import tsIcon from '../assets/typescript.png';
-// import htmlIcon from '../assets/html.png';
-// import cssIcon from '../assets/css.png';
+import JavascriptIcon from '../../assets/Icons/javascript.webp';
+import pythonIcon from '../../assets/Icons/python.png';
+import javaIcon from '../../assets/Icons/java.webp';
+import SpringBootIcon from '../../assets/Icons/sprinboot.png';
+import htmlIcon from '../../assets/Icons/html.png';
+import cssIcon from '../../assets/Icons/css.webp';
 
 const skillsData = [
   { name: 'MongoDB', icon: mongoDBIcon },
-  { name: 'MySQL' },
-  { name: 'React.js' },
-  { name: 'Node.js', icon:nodeIcon },
-  { name: 'JavaScript' },
-  { name: 'Python' },
-  { name: 'JAVA', icon: Java },
-  { name: 'Sprin Boot' },
-  { name: 'HTML' },
-  { name: 'CSS' },
+  { name: 'MySQL', icon: mysqlIcon },
+  { name: 'React.js', icon: reactIcon },
+  { name: 'Node.js', icon: nodeIcon },
+  { name: 'JavaScript', icon: JavascriptIcon },
+  { name: 'Python', icon: pythonIcon },
+  { name: 'JAVA', icon: javaIcon },
+  { name: 'Sprin Boot', icon: SpringBootIcon },
+  { name: 'HTML', icon: htmlIcon },
+  { name: 'CSS', icon: cssIcon },
 ];
 
 const Skill = () => {

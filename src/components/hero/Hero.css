@@ -82,7 +82,7 @@
     100% { opacity: 0; }
   }
   
-  .profile-image {
+  .profile-image { 
     width: 100%;
     max-width: 300px; /* Cap size but allow shrinking */
     height: auto; /* Maintain aspect ratio */

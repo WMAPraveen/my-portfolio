@@ -12,7 +12,7 @@
 }
 
 .about-heading {
-  font-size: 1rem;
+  font-size: 1.3rem;
   color: #4e0c04;
   font-weight: bold;
   position: relative;
@@ -44,6 +44,21 @@ h1.display-1 {
 /* Paragraph */
 .about-me-section p {
   color: #333;
+}
+
+.about-image-container{
+   position: relative;
+    display: inline-block;
+    overflow: hidden;
+}
+
+.about-image{
+    width: 100%;
+    max-width: 490px; /* Cap size but allow shrinking */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover;
+    position: relative;
+    z-index: 1;
 }
 
 /* Responsive Headings */
