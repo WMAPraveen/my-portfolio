@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Navbar, Nav, Button } from 'react-bootstrap';
-import { FaBars } from 'react-icons/fa'; 
-import './Navbar.css'; 
+import { FaBars } from 'react-icons/fa';
+import './Navbar.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 
 const CustomNavbar = () => {
@@ -21,22 +21,22 @@ const CustomNavbar = () => {
   };
 
   return (
-    <Navbar bg="dark" variant="dark" expand="lg" className=" navbar">
+    <Navbar expand="lg" className="navbar" style={{ backgroundImage: 'linear-gradient(135deg, #160200ea 0%, #000000ea 50%, #1d0400ea 100%)' }}>
       <Navbar.Brand href="#home">
         <span className="logo fw-bold">&lt;/AVISHKA&gt;</span>
       </Navbar.Brand>
-      
+
       {/* Custom Hamburger Icon */}
-     <div>
-     <Button
-        variant="link"
-        className="d-lg-none text-white"
-        onClick={toggleNavbar}
-      >
-        <FaBars size={30} />
-      </Button>
-     </div>
-      
+      <div>
+        <Button
+          variant="link"
+          className="d-lg-none text-white"
+          onClick={toggleNavbar}
+        >
+          <FaBars size={30} />
+        </Button>
+      </div>
+
       {/* Navbar Links */}
       <Navbar.Collapse id="basic-navbar-nav" className={isOpen ? 'show' : ''}>
         <Nav className="mx-auto">
@@ -46,10 +46,12 @@ const CustomNavbar = () => {
             </Nav.Link>
           ))}
         </Nav>
-        <Button   className="d-flex align-items-center d-none d-lg-block outline-button">
-          <i className="bi bi-cloud-arrow-down-fill me-2 "></i>
-          Resume
-        </Button>
+        <a href="/Avishka Resume.pdf" download="Avishka Resume.pdf">
+          <Button className="me-2 button-full">
+            <i className="bi bi-cloud-arrow-down-fill me-2"></i>
+            Resume
+          </Button>
+        </a>
       </Navbar.Collapse>
     </Navbar>
   );

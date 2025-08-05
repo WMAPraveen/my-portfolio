@@ -2,6 +2,7 @@
 
 .contact-section {
   font-family: poppins, sans-serif;
+  background-color: #f5eaea;
 
 }
 
@@ -18,7 +19,7 @@
 }
 
 .contact-heading {
-  color: #4e0c04;
+  color: #8f2d22;
   margin-bottom: 35px;
   font-weight: bold;
   font-size: 1.3rem;
@@ -31,7 +32,7 @@
   top: 0;
   height: 90px;
   width: 2px;
-  background-color: #4e0c04;
+  background-color: #8f2d22;
 }
 
 .contact-subtitle {

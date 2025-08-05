@@ -45,7 +45,7 @@ const Skill = () => {
 <motion.div
     initial={{ opacity: 0, y: 100 }}
     whileInView={{ opacity: 1, y: 0 }}
-    transition={{ duration: 1, ease: "easeOut" }}
+    transition={{ duration: 1.2, ease: "easeOut" }}
     viewport={{ once: true }}
   >
       <div className='program-section-headding'>

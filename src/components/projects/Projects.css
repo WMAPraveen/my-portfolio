@@ -1,10 +1,38 @@
 .card-carousel-section {
-  background-color: #ffffff;
+  background-color: #f5eaea;
   min-height: 100vh;
   padding: 40px 20px;
   position: relative;
   overflow: hidden;
 }
+
+.project-section-headding{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.project-headding{
+  font-size: 1.3rem;
+  color: #8f2d22;
+  font-weight: bold;
+  position: relative;
+  margin-bottom: 60px;
+  padding-top: 100px; 
+}
+
+.project-section-headding::after{
+   content: '';
+  position: absolute;
+  top: 0;
+  height: 90px;
+  width: 2px;
+  background-color: #8f2d22;
+}
+
+
+
 
 .text-center.mb-4 {
   color: #333;
@@ -14,6 +42,8 @@
 
 .carousel-wrapper {
   width: 100%;
+  padding: 15px;
+  height: 500px;
   overflow: hidden;
 }
 
@@ -39,32 +69,34 @@
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  background-color: #fff;
+  background-image: linear-gradient(135deg, #140402 0%, #0a0201 50%, #200c02 100%);
   transition: transform 1s ease; /* Slower transition for smoother movement */
+  height: 380px;
 }
 
 .carousel-card img {
   width: 100%;
   height: 200px;
   object-fit: cover;
+  padding: 25px;
+  border-radius: 30px;
 }
 
 .card-body {
+  display: flex;
+  flex-direction: column;
   padding: 20px;
   text-align: center;
+  height: 150px; /* Fixed height for consistent card body */
+  justify-content: space-between;
 }
 
 .card-body h3 {
-  font-size: 1.5rem;
-  color: #007bff;
+  font-size: 1.4rem;
+  color: #8f2d22;
   margin-bottom: 10px;
 }
 
-.card-body p {
-  font-size: 1rem;
-  color: #6c757d;
-  margin-bottom: 0;
-}
 
 .carousel-card:hover {
   transform: scale(1.05);

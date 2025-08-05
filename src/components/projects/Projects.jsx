@@ -1,12 +1,17 @@
 import React from 'react';
 import './Projects.css'; // Custom CSS for styling
+import { Container, Button } from 'react-bootstrap';
+import { motion } from 'framer-motion';
+import project1 from '../../assets/Projects/ScreenShot 1.jpeg'
+import project2 from '../../assets/Projects/ScreenShot 2.jpeg'
+import project4 from '../../assets/Projects/ScreenShot 4.jpeg'
 
 const Projects = () => {
   const cards = [
-    { title: 'Card 1', content: 'This is the first card with some sample content.', image: 'https://via.placeholder.com/300x200?text=Card+1' },
-    { title: 'Card 2', content: 'This is the second card with different content.', image: 'https://via.placeholder.com/300x200?text=Card+2' },
-    { title: 'Card 3', content: 'This is the third card with unique content.', image: 'https://via.placeholder.com/300x200?text=Card+3' },
-    { title: 'Card 4', content: 'This is the fourth card with sample content.', image: 'https://via.placeholder.com/300x200?text=Card+4' },
+    { title: 'Online Auction Web Application',  image: project1 },
+    { title: 'Nike Demo Website', image: project2 },
+    { title: 'Flex Ride Car Rental Mobile App',  image: 'https://via.placeholder.com/300x200?text=Card+3' },
+    { title: 'Portfolio Website',  image: project4 },
   ];
 
   // Group cards into sets of 3 (for structure, but we'll scroll all)
@@ -17,20 +22,42 @@ const Projects = () => {
 
   return (
     <section className="card-carousel-section">
-      <h2 className="text-center mb-4">Featured Cards</h2>
-      <div className="carousel-wrapper">
-        <div className="d-flex justify-content-center continuous-scroll">
-          {cards.concat(cards).map((card, index) => ( // Duplicate cards for seamless looping
-            <div className="carousel-card" key={index}>
-              <img className="d-block w-100" src={card.image} alt={card.title} />
-              <div className="card-body">
-                <h3>{card.title}</h3>
-                <p>{card.content}</p>
+      <Container>
+        <motion.div
+          initial={{ opacity: 0, y: 100 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, ease: "easeOut" }}
+          viewport={{ once: true }}
+        >
+          <div className='project-section-headding'>
+            <h2 className=" project-headding mb-5 poppins">Projects</h2>
+          </div>
+        </motion.div>
+
+         <motion.div
+          initial={{ opacity: 0, y: 100 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1.2, ease: "easeOut" }}
+          viewport={{ once: true }}
+        >
+
+        <div className="carousel-wrapper">
+          <div className="d-flex justify-content-center continuous-scroll">
+            {cards.concat(cards).map((card, index) => ( // Duplicate cards for seamless looping
+              <div className="carousel-card" key={index}>
+                <img className="d-block w-100 project-image" src={card.image} alt={card.title} />
+                <div className="card-body">
+                  <h3>{card.title}</h3>
+                <Button className="button-full btn-project">
+                  Source Code
+                </Button>
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
-      </div>
+        </motion.div>
+      </Container>
     </section>
   );
 };

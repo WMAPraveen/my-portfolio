@@ -1,6 +1,7 @@
 import React from 'react';
 import { Container } from 'react-bootstrap';
 import { FaGraduationCap, FaBriefcase, FaSchool } from 'react-icons/fa';
+import { motion } from 'framer-motion';
 import './Milestones.css';
 
 const Milestones = () => {
@@ -42,9 +43,24 @@ const Milestones = () => {
   return (
     <section className="milestones">
       <Container>
+         <motion.div
+          initial={{ opacity: 0, y: 100 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, ease: "easeOut" }}
+          viewport={{ once: true }}
+        >
         <div className='milestones-section-heading'>
         <h2 className="milestones-heading text-center">Special Milestones</h2>
         </div>
+        </motion.div>
+
+
+        {/* <motion.div
+          initial={{ opacity: 0, y: 100 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, ease: "easeOut" }}
+          viewport={{ once: true }}
+        > */}
         
         <div className="timeline">
           {milestones.map((milestone, index) => (
@@ -52,6 +68,12 @@ const Milestones = () => {
               key={index}
               className={`timeline-container ${index % 2 === 0 ? 'left' : 'right'}`}
             >
+              <motion.div
+          initial={{ opacity: 0, y: 100 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, ease: "easeOut" }}
+          viewport={{ once: true }}
+        >
               <div className= {`content ${index % 2 === 0 ? 'left' : 'right'}`}>
                 <span className="icon">{milestone.icon}</span>
                 <h6>{milestone.title}</h6>
@@ -59,9 +81,13 @@ const Milestones = () => {
                 <p className="description">{milestone.description}</p>
                 <span className="date">{milestone.date}</span>
               </div>
+
+              </motion.div>
+
             </div>
           ))}
         </div>
+       
       </Container>
     </section>
   );

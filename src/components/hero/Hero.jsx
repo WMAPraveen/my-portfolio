@@ -48,14 +48,14 @@ const Hero = () => {
       <Container className=''>
 
         <Row className="align-items-center hero-container">
-          
-            <Col xs={12} lg={6} className="text-section ">
+
+          <Col xs={12} lg={6} className="text-section ">
             <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 1, ease: "easeOut" }}
-            viewport={{ once: true }}
-          >
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 1.1, ease: "easeOut" }}
+              viewport={{ once: true }}
+            >
               <h1 className="poppins-bold ">
                 <span className='hero-title'>Hi, I am</span><br />
                 <span className="my-name">Avishka,</span><br />
@@ -65,26 +65,29 @@ const Hero = () => {
                 Welcome to my portfolio! Avishka Wijesinghe is an Experienced Full Stack Developer with a passion for crafting visually stunning and intuitive web experiences. With a unique blend of technical expertise and creative flair, there is strong confidence in the ability to deliver custom solutions tailored to diverse project requirements.
               </p>
               <div className="mt-4">
-                <Button className="me-2 button-full">
-                  <i className="bi bi-cloud-arrow-down-fill me-2"></i>
-                  Resume
-                </Button>
-                <Button className="outline-button">
+                <a href="/Avishka Resume.pdf" download="Avishka Resume.pdf">
+                  <Button className="me-2 button-full">
+                    <i className="bi bi-cloud-arrow-down-fill me-2"></i>
+                    Resume
+                  </Button>
+                </a>
+                  
+                <Button className="me-2 outline-button">
                   <i className="bi bi-envelope-fill me-2"></i>
                   Contact Me
                 </Button>
               </div>
-              </motion.div>
-            </Col>
-          
-        
-            <Col xs={12} lg={6} className="profile-image-section d-flex justify-content-center align-items-center">
-              <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 1, ease: "easeOut" }}
-            viewport={{ once: true }}
-          >
+            </motion.div>
+          </Col>
+
+
+          <Col xs={12} lg={6} className="profile-image-section d-flex justify-content-center align-items-center">
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 1.1, ease: "easeOut" }}
+              viewport={{ once: true }}
+            >
               <div className="profile-image-container">
                 <img
                   src={Profile}
@@ -92,9 +95,9 @@ const Hero = () => {
                   className="img-fluid profile-image"
                 />
               </div>
-               </motion.div>
-            </Col>
-         
+            </motion.div>
+          </Col>
+
         </Row>
 
       </Container>

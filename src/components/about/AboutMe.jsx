@@ -3,9 +3,11 @@ import { Container, Row, Col } from 'react-bootstrap';
 import AboutImg from '../../assets/aboutImg.png';
 import './AboutMe.css';
 import { motion } from 'framer-motion';
+import { section } from 'framer-motion/client';
 
 const AboutMe = () => {
   return (
+    <section className='about-section'>
     <Container className="py-5 about-me-section">
       {/* Vertical line above title */}
       <motion.div
@@ -25,7 +27,7 @@ const AboutMe = () => {
           <motion.div
             initial={{ opacity: 0, y: 100 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, ease: "easeOut" }}
+            transition={{ duration: 1.2, ease: "easeOut" }}
             viewport={{ once: true }}
           >
             <div className="about-image-container">
@@ -44,7 +46,7 @@ const AboutMe = () => {
           <motion.div
             initial={{ opacity: 0, y: 100 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, ease: "easeOut" }}
+            transition={{ duration: 1.2, ease: "easeOut" }}
             viewport={{ once: true }}
           >
             <div>
@@ -114,6 +116,7 @@ const AboutMe = () => {
       </Row>
 
     </Container>
+    </section>
   );
 };
 
