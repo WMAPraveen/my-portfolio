@@ -41,17 +41,17 @@ const CustomNavbar = () => {
       <Navbar.Collapse id="basic-navbar-nav" className={isOpen ? 'show' : ''}>
         <Nav className="mx-auto">
           {navLinks.map((item, index) => (
-            <Nav.Link key={index} href={item.href} className="nav-links-container m-1 px-2 mx-4 nav-link">
+            <Nav.Link key={index} href={item.href} className="nav-links-container m-1 px-1 mx-4 nav-link">
               {item.label}
             </Nav.Link>
           ))}
         </Nav>
-        <a href="/Avishka Resume.pdf" download="Avishka Resume.pdf">
-          <Button className="me-2 button-full">
+        {/* <a href="/Avishka Resume.pdf" download="Avishka Resume.pdf">
+          <Button className="button-full">
             <i className="bi bi-cloud-arrow-down-fill me-2"></i>
             Resume
           </Button>
-        </a>
+        </a> */}
       </Navbar.Collapse>
     </Navbar>
   );
