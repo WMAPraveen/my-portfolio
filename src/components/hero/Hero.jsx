@@ -8,7 +8,7 @@ import { motion } from 'framer-motion';
 const Hero = () => {
   const [displayedText, setDisplayedText] = useState('');
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [isDeleting, setIsDeleting] = useState(false);
+  const [isDeleting, setIsDeleting] = useState(false); 
 
   const titles = [
     'Full-Stack Developer',

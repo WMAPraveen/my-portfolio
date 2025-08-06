@@ -54,7 +54,7 @@ const Skill = () => {
 
       <Row className="justify-content-center">
         {skillsData.map((skill, index) => (
-          <Col xs={6} sm={4} md={3} lg={2} key={index} className="skill-item text-center mb-4">
+          <Col xs={4} sm={3} md={3} lg={2} key={index} className="skill-item text-center mb-4">
             <div className="skill-icon-container">
               <img src={skill.icon} alt={skill.name} className="skill-icon" />
             </div>

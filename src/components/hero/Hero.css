@@ -124,6 +124,9 @@
   
   
   @media (max-width: 768px) {
+    .hero-section {
+     margin-top: 66px;
+    }
     .poppins-bold {
       font-size: 30px;
     }
