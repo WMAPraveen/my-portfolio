@@ -7,6 +7,7 @@ import './Footer.css';
 
 const Footer = () => {
   return (
+      
     <footer className="footer-section">
       <Container className="py-5">
         <Row className="py-5 footer-container">
@@ -37,16 +38,16 @@ const Footer = () => {
           <Col md={4} sm={12} className="mb-4">
             <h5 className="footer-title">Get in touch</h5>
             <div className="social-icons">
-              <a href="https://github.com" target="_blank" rel="noopener noreferrer" style={{textDecoration: 'none'}}>
+              <a href="https://github.com/WMAPraveen" target="_blank" rel="noopener noreferrer" style={{textDecoration: 'none'}}>
                 <i className="bi bi-github social-icon"></i>
               </a>
               <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" style={{textDecoration: 'none'}}>
                 <i className="bi bi-twitter social-icon"></i>
               </a>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" style={{textDecoration: 'none'}}>
+              <a href="https://www.linkedin.com/in/avishka-wijesinghe/" target="_blank" rel="noopener noreferrer" style={{textDecoration: 'none'}}>
                 <i className="bi bi-linkedin social-icon"></i>
               </a>
-              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" style={{textDecoration: 'none'}}>
+              <a href="https://web.facebook.com/avishka.wijesinghe.02" target="_blank" rel="noopener noreferrer" style={{textDecoration: 'none'}}>
                 <i className="bi bi-facebook social-icon"></i>
               </a>
             </div>
@@ -71,6 +72,7 @@ const Footer = () => {
         <FontAwesomeIcon icon={faAngleUp} />
       </Button>
     </footer>
+   
   );
 };
 

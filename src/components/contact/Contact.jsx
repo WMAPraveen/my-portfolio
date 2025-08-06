@@ -64,7 +64,7 @@ const Contact = () => {
   };
 
   return (
-    <section className="contact-section d-flex align-items-center justify-content-center">
+    <section id="contact" className="contact-section d-flex align-items-center justify-content-center">
       <Container className="py-5 contact-container">
         <motion.div
           initial={{ opacity: 0, y: 100 }}

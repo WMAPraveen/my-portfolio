@@ -9,10 +9,10 @@ import project4 from '../../assets/Projects/ScreenShot 4.jpeg'
 
 const Projects = () => {
   const cards = [
-    { title: 'Online Auction Web Application',  image: project1 },
-    { title: 'Nike Demo Website', image: project2 },
-    { title: 'Flex Ride Car Rental Mobile App',  image: project3 },
-    { title: 'Portfolio Website',  image: project4 },
+    { title: 'Online Auction Web Application',  image: project1 , link:'' },
+    { title: 'Nike Demo Website', image: project2 , link:'' },
+    { title: 'Flex Ride Car Rental Mobile App',  image: project3, link:'https://github.com/WMAPraveen/Flex-Ride.git' },
+    { title: 'Portfolio Website',  image: project4, link:'https://github.com/WMAPraveen/my-portfolio.git' },
   ];
 
   // Group cards into sets of 3 (for structure, but we'll scroll all)
@@ -22,7 +22,7 @@ const Projects = () => {
   }
 
   return (
-    <section className="card-carousel-section">
+    <section id="projects" className="card-carousel-section">
       <Container>
         <motion.div
           initial={{ opacity: 0, y: 100 }}
@@ -49,7 +49,7 @@ const Projects = () => {
                 <img className="d-block w-100 project-image" src={card.image} alt={card.title} />
                 <div className="card-body">
                   <h3>{card.title}</h3>
-                <Button className="button-full btn-project">
+                <Button href={card.link} className="button-full btn-project">
                   Source Code
                 </Button>
                 </div>

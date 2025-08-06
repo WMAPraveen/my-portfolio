@@ -41,7 +41,7 @@ const Milestones = () => {
   ];
 
   return (
-    <section className="milestones">
+    <section id="milestones" className="milestones">
       <Container>
          <motion.div
           initial={{ opacity: 0, y: 100 }}

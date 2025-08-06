@@ -7,7 +7,7 @@ import { section } from 'framer-motion/client';
 
 const AboutMe = () => {
   return (
-    <section className='about-section'>
+    <section id="about" className='about-section'>
     <Container className="py-5 about-me-section">
       {/* Vertical line above title */}
       <motion.div

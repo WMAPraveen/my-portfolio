@@ -21,7 +21,7 @@ const CustomNavbar = () => {
   };
 
   return (
-    <Navbar expand="lg" className="navbar" style={{ backgroundImage: 'linear-gradient(135deg, #160200ea 0%, #000000ea 50%, #1d0400ea 100%)' }}>
+    <Navbar  fixed="top" expand="lg" className="navbar" style={{ backgroundImage: 'linear-gradient(135deg, #130200ea 0%, #531a1aea 50%, #130200ea 100%)' }}>
       <Navbar.Brand href="#home">
         <span className="logo fw-bold">&lt;/AVISHKA&gt;</span>
       </Navbar.Brand>

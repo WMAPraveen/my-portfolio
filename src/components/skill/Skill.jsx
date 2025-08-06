@@ -29,7 +29,7 @@ const skillsData = [
 
 const Skill = () => {
   return (
-   <section className="skills-section py-5">
+   <section id="skills" className="skills-section py-5">
   
     <Container>
       <motion.div
