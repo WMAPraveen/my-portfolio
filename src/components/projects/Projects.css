@@ -54,7 +54,7 @@
   width: 100%;
   max-width: 800px; /* Fit all 4 cards (300px * 4 + 30px * 3 gaps = 1200px) */
   margin: 0 auto;
-  animation: scroll 40s linear infinite; /* Slow continuous scroll */
+  animation: scroll 45s linear infinite; /* Slow continuous scroll */
 }
 
 /* Calculate the total width of all cards including margins and gaps */

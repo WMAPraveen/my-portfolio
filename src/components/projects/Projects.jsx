@@ -4,13 +4,14 @@ import { Container, Button } from 'react-bootstrap';
 import { motion } from 'framer-motion';
 import project1 from '../../assets/Projects/ScreenShot 1.jpeg'
 import project2 from '../../assets/Projects/ScreenShot 2.jpeg'
+import project3 from '../../assets/Projects/ScreenShot 3.png'
 import project4 from '../../assets/Projects/ScreenShot 4.jpeg'
 
 const Projects = () => {
   const cards = [
     { title: 'Online Auction Web Application',  image: project1 },
     { title: 'Nike Demo Website', image: project2 },
-    { title: 'Flex Ride Car Rental Mobile App',  image: 'https://via.placeholder.com/300x200?text=Card+3' },
+    { title: 'Flex Ride Car Rental Mobile App',  image: project3 },
     { title: 'Portfolio Website',  image: project4 },
   ];
 

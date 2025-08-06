@@ -19,23 +19,23 @@ const Milestones = () => {
       title: 'BSc (Hons) in Software Engineering (Undergraduate)',
       company: 'NSBM Green University',
       description:
-        'Pursuing BSc (Hons) in Software Engineering at NSBM Green University, Lakshan Rukantha focuses on mastering front-end and back-end technologies while building a strong emphasis on key software development principles.',
+        'Began undergraduate studies in Software Engineering at NSBM Green University. Focused on both front-end and back-end technologies while learning essential software engineering principles and industry practices.',
       icon: <FaGraduationCap />,
     },
     {
-      date: 'October, 2020',
+      date: 'October, 2018',
       title: 'G.C.E. (A/L) Examination',
-      company: 'V/ Agrabodhi M.V',
+      company: 'M/Rahula Collage',
       description:
-        'Passed the Sri Lankan Advanced Level (A/L) Examination, a qualification equivalent to Cambridge A-Levels.',
+        'Passed the Sri Lankan Advanced Level (A-Level) Examination at Matara Rahula Collage. Focused on Maths stream with subjects including Combined Maths, Chemistry, and Physics.',
       icon: <FaSchool />,
     },
     {
-      date: 'December, 2017',
+      date: 'December, 2013',
       title: 'G.C.E. (O/L) Examination',
-      company: 'V/ Agrabodhi M.V',
+      company: 'M/Rahula Collage',
       description:
-        'Completed the Sri Lankan Ordinary Level (O/L) Examination, signifying completion of secondary education.',
+        'Passed the Sri Lankan Ordinary Level (O-Level) Examination at  Matara Rahula Collage. This qualification is equivalent to the Cambridge O-Level and marks the completion of secondary education in Sri Lanka. Conducted by the Ministry of Education.',
       icon: <FaSchool />,
     },
   ];

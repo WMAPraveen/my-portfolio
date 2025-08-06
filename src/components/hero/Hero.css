@@ -5,7 +5,7 @@
     flex-direction: row;
     align-items: center;
     overflow-x: hidden; /* Prevent horizontal scroll */
-     background-image: linear-gradient(135deg, #140402 0%, #0a0201 50%, #200c02 100%);
+     background-image: linear-gradient(135deg, #140402 0%, #200c02 50%, #140402 100%);
     
   }
 
@@ -108,7 +108,7 @@
   
   .my-name {
     font-size: 80px;
-    color: #4e0c04;
+    color: #5a0e06;
   }
 
   .welcome-text{
@@ -143,9 +143,12 @@
     .profile-image {
       max-width: 200px;
       margin-top: 20px;
+        
     }
     .profile-image-section{
       margin-top: 0px;
+    
+      
     }
     
   }
