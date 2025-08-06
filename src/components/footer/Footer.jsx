@@ -58,7 +58,7 @@ const Footer = () => {
         <Row>
           <Col className="text-center py-3">
             <p className="copyright-text">
-              Copyright © 2020-2025 | All rights reserved. Made with{'♥️'} by Avishka Wijesinghe
+              Copyright © 2020-2025 | All rights reserved. Made with{' ♥️'} by Avishka Wijesinghe
             </p>
           </Col>
         </Row>
